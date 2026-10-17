@@ -1,0 +1,932 @@
+/* ==========================================
+   ECOQUEST - FINAL STYLE
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7fbf7;
+    color: #173b25;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+nav {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e3eee4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #18864b;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #31543b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #18864b;
+}
+
+
+.login-btn {
+    border: none;
+    background: #18864b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    background: #116c3b;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 620px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        linear-gradient(
+            135deg,
+            #eef9ef,
+            #ffffff
+        );
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.tag {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #dff4e3;
+    color: #18864b;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: #153c24;
+}
+
+
+.hero h1 span {
+    color: #18864b;
+}
+
+
+.hero-content > p {
+    font-size: 18px;
+    color: #5b6f60;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.primary-btn {
+    background: #18864b;
+    color: white;
+}
+
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    background: #116c3b;
+}
+
+
+.secondary-btn {
+    background: white;
+    color: #18864b;
+    border: 2px solid #18864b;
+}
+
+
+.secondary-btn:hover {
+    background: #eaf7ed;
+}
+
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+}
+
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-stats strong {
+    font-size: 25px;
+    color: #173b25;
+}
+
+
+.hero-stats small {
+    color: #718176;
+}
+
+
+/* ==========================================
+   HERO VISUAL
+========================================== */
+
+.hero-visual {
+    min-width: 350px;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.earth {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 190px;
+    filter: drop-shadow(
+        0 25px 30px rgba(30, 100, 60, 0.2)
+    );
+    animation: floatEarth 4s ease-in-out infinite;
+}
+
+
+@keyframes floatEarth {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.xp-card,
+.streak-card {
+    position: absolute;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow:
+        0 15px 35px rgba(28, 72, 43, 0.12);
+    font-weight: 800;
+}
+
+
+.xp-card {
+    top: 45px;
+    right: 0;
+    color: #18864b;
+}
+
+
+.xp-card small {
+    display: block;
+    font-size: 11px;
+    color: #7a8b7e;
+    margin-top: 3px;
+}
+
+
+.streak-card {
+    bottom: 55px;
+    left: 5px;
+    color: #df7b19;
+}
+
+
+/* ==========================================
+   GENERAL SECTION
+========================================== */
+
+.section {
+    padding: 90px 8%;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+
+.section-title p {
+    color: #18864b;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+.section-title h2 {
+    font-size: 40px;
+    margin: 7px 0;
+    color: #173b25;
+}
+
+
+.section-title span {
+    color: #718176;
+}
+
+
+/* ==========================================
+   QUESTS
+========================================== */
+
+.quest-container {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.quest-card {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid #e2eee4;
+    box-shadow:
+        0 12px 30px rgba(26, 75, 42, 0.06);
+    transition: 0.3s;
+}
+
+
+.quest-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 40px rgba(26, 75, 42, 0.12);
+}
+
+
+.quest-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.easy {
+    background: #dcf5e3;
+    color: #18864b;
+}
+
+
+.medium {
+    background: #fff1d9;
+    color: #b56a00;
+}
+
+
+.quest-card h3 {
+    font-size: 23px;
+    margin: 15px 0 8px;
+}
+
+
+.quest-card p {
+    color: #718176;
+    margin-bottom: 25px;
+}
+
+
+.quest-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.quest-bottom b {
+    color: #18864b;
+}
+
+
+.quest-bottom button {
+    border: none;
+    background: #e8f6eb;
+    color: #18864b;
+    padding: 9px 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+
+.quest-bottom button:hover {
+    background: #18864b;
+    color: white;
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard-section {
+    padding: 90px 8%;
+    background: #eaf7ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+
+.dashboard-text {
+    max-width: 520px;
+}
+
+
+.dashboard-text > p:first-child {
+    color: #18864b;
+    font-weight: 800;
+}
+
+
+.dashboard-text h2 {
+    font-size: 43px;
+    line-height: 1.15;
+    margin: 10px 0 20px;
+}
+
+
+.dashboard-text p {
+    color: #647367;
+    margin-bottom: 25px;
+}
+
+
+.dashboard-card {
+    width: 430px;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow:
+        0 20px 45px rgba(26, 75, 42, 0.12);
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e4f5e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+.profile h3 {
+    font-size: 20px;
+}
+
+
+.profile p {
+    color: #7a897d;
+    font-size: 13px;
+}
+
+
+.level {
+    margin-bottom: 30px;
+}
+
+
+.level-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #e4eee5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #18864b;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+.mini-stats {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+.mini-stats div {
+    background: #f4faf4;
+    padding: 15px 8px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+.mini-stats strong {
+    display: block;
+    font-size: 21px;
+    color: #173b25;
+}
+
+
+.mini-stats small {
+    color: #7b897e;
+}
+
+
+/* ==========================================
+   LEADERBOARD
+========================================== */
+
+.leaderboard {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.rank {
+    display: grid;
+    grid-template-columns:
+        60px 1fr auto;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    background: white;
+    border: 1px solid #e2eee4;
+    border-radius: 15px;
+    box-shadow:
+        0 8px 20px rgba(26, 75, 42, 0.05);
+}
+
+
+.rank span {
+    font-size: 24px;
+}
+
+
+.rank strong {
+    font-size: 16px;
+}
+
+
+.rank b {
+    color: #18864b;
+}
+
+
+.rank.first {
+    border-left: 5px solid #e7b300;
+}
+
+
+.rank.second {
+    border-left: 5px solid #a6a6a6;
+}
+
+
+.rank.third {
+    border-left: 5px solid #b87840;
+}
+
+
+#player-rank {
+    background: #eaf7ed;
+    border: 2px solid #18864b;
+}
+
+
+/* ==========================================
+   BADGES
+========================================== */
+
+.badge-section {
+    padding: 90px 8%;
+    background: #f0f8f1;
+}
+
+
+.badges {
+    display: grid;
+    grid-template-columns:
+        repeat(5, 1fr);
+    gap: 18px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.badge {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid #e1ece2;
+    transition: 0.3s;
+}
+
+
+.badge:hover {
+    transform: translateY(-6px);
+}
+
+
+.badge-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+.badge h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+
+.badge p {
+    color: #7a897d;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+
+.badge strong {
+    font-size: 12px;
+    color: #18864b;
+}
+
+
+/* ==========================================
+   QUIZ
+========================================== */
+
+.quiz-section {
+    padding: 90px 8%;
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7ed,
+            #f9fcf9
+        );
+}
+
+
+.quiz-card {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow:
+        0 20px 45px rgba(26, 75, 42, 0.1);
+}
+
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    color: #18864b;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+
+.quiz-card h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+
+.options {
+    display: grid;
+    gap: 12px;
+}
+
+
+.options button {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #dceadd;
+    background: #f3f8f3;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #284b34;
+    transition: 0.2s;
+}
+
+
+.options button:hover:not(:disabled) {
+    border-color: #18864b;
+    background: #eaf7ed;
+}
+
+
+.options button:disabled {
+    cursor: not-allowed;
+}
+
+
+#quiz-result {
+    min-height: 25px;
+    margin-top: 18px;
+    font-weight: 800;
+}
+
+
+.quiz-xp {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eaf7ed;
+    border-radius: 12px;
+    text-align: center;
+    color: #18864b;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    padding: 45px 8%;
+    background: #12351f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer h2 {
+    margin-bottom: 5px;
+}
+
+
+footer p {
+    color: #b9cbbb;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .hero-buttons,
+    .hero-stats {
+        justify-content: center;
+    }
+
+
+    .dashboard-section {
+        flex-direction: column;
+    }
+
+
+    .quest-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .badges {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+
+    .nav-links {
+        gap: 10px;
+    }
+
+
+    .nav-links a {
+        display: none;
+    }
+
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+
+    .hero-visual {
+        min-width: 280px;
+    }
+
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+
+    .section,
+    .badge-section,
+    .quiz-section,
+    .dashboard-section {
+        padding: 65px 5%;
+    }
+
+
+    .quest-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .badges {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .dashboard-card {
+        width: 100%;
+    }
+
+
+    .rank {
+        grid-template-columns:
+            40px 1fr auto;
+    }
+
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .badges {
+        grid-template-columns: 1fr;
+    }
+
+
+    .quiz-card {
+        padding: 22px;
+    }
+
+}

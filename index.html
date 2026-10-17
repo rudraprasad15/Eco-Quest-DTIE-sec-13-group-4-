@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        EcoQuest - Gamified Environmental Education
+    </title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================
+         NAVBAR
+    ======================================= -->
+
+    <nav>
+
+        <div class="logo">
+            🌱 EcoQuest
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#">
+                Home
+            </a>
+
+            <a href="#quests">
+                Quests
+            </a>
+
+            <a href="#leaderboard">
+                Leaderboard
+            </a>
+
+            <a href="#badges">
+                Badges
+            </a>
+
+            <button
+                class="login-btn"
+                onclick="login()">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ======================================
+         HERO
+    ======================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+
+                🌍 LEARN • PLAY • IMPACT
+
+            </div>
+
+
+            <h1>
+
+                Learn About Earth.
+                <br>
+
+                <span>
+                    Play. Earn. Make Impact.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Turn environmental education
+                into an exciting adventure.
+                Complete quests, answer quizzes,
+                earn XP and become a
+                Planet Guardian.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-btn"
+                    onclick="startQuest()">
+
+                    Start Your Quest 🚀
+
+                </button>
+
+
+                <button
+                    class="secondary-btn"
+                    onclick="showInfo()">
+
+                    How It Works?
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div>
+
+                    <strong>
+                        12K+
+                    </strong>
+
+                    <small>
+                        Students
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        48K+
+                    </strong>
+
+                    <small>
+                        Quests Done
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        18K+
+                    </strong>
+
+                    <small>
+                        Eco Actions
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="earth">
+                🌍
+            </div>
+
+
+            <div class="xp-card">
+
+                ⭐ +250 XP
+
+                <small>
+                    Quest Completed!
+                </small>
+
+            </div>
+
+
+            <div class="streak-card">
+
+                🔥 Daily Streak
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         QUESTS
+    ======================================= -->
+
+    <section
+        id="quests"
+        class="section">
+
+        <div class="section-title">
+
+            <p>
+                🎮 PLAY & LEARN
+            </p>
+
+            <h2>
+                Environmental Quests
+            </h2>
+
+            <span>
+                Complete challenges and earn XP.
+            </span>
+
+        </div>
+
+
+        <div class="quest-container">
+
+
+            <!-- QUEST 1 -->
+
+            <div class="quest-card">
+
+                <div class="quest-icon">
+                    ♻️
+                </div>
+
+                <span class="difficulty easy">
+                    EASY
+                </span>
+
+                <h3>
+                    Plastic Detective
+                </h3>
+
+                <p>
+                    Identify 10 recyclable
+                    items around you.
+                </p>
+
+
+                <div class="quest-bottom">
+
+                    <b>
+                        ⭐ 120 XP
+                    </b>
+
+                    <button
+                        onclick="completeQuest(120)">
+
+                        Start →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUEST 2 -->
+
+            <div class="quest-card">
+
+                <div class="quest-icon">
+                    💧
+                </div>
+
+                <span class="difficulty medium">
+                    MEDIUM
+                </span>
+
+                <h3>
+                    Water Warrior
+                </h3>
+
+                <p>
+                    Complete 3 water-saving
+                    activities.
+                </p>
+
+
+                <div class="quest-bottom">
+
+                    <b>
+                        ⭐ 180 XP
+                    </b>
+
+                    <button
+                        onclick="completeQuest(180)">
+
+                        Start →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUEST 3 -->
+
+            <div class="quest-card">
+
+                <div class="quest-icon">
+                    🌳
+                </div>
+
+                <span class="difficulty medium">
+                    MEDIUM
+                </span>
+
+                <h3>
+                    Green Explorer
+                </h3>
+
+                <p>
+                    Identify 5 plants or trees
+                    in your area.
+                </p>
+
+
+                <div class="quest-bottom">
+
+                    <b>
+                        ⭐ 150 XP
+                    </b>
+
+                    <button
+                        onclick="completeQuest(150)">
+
+                        Start →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         DASHBOARD
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+
+        <div class="dashboard-text">
+
+            <p>
+                📊 YOUR PROGRESS
+            </p>
+
+            <h2>
+
+                Every action takes you
+                <br>
+                one step further.
+
+            </h2>
+
+            <p>
+
+                Track your XP, level,
+                streak and environmental
+                impact from your personal
+                dashboard.
+
+            </p>
+
+
+            <button
+                class="primary-btn"
+                onclick="openDashboard()">
+
+                View Dashboard →
+
+            </button>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+
+            <div class="profile">
+
+                <div class="avatar">
+                    👨‍🎓
+                </div>
+
+
+                <div>
+
+                    <h3 id="player-name">
+                        Eco Explorer
+                    </h3>
+
+                    <p id="profile-level">
+                        Level 1 • Eco Explorer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="level">
+
+                <div class="level-text">
+
+                    <span id="player-level">
+                        Level 1
+                    </span>
+
+                    <span id="player-xp">
+                        0 / 100 XP
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        id="xp-progress">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="mini-stats">
+
+
+                <div>
+
+                    🔥
+
+                    <strong id="streak-count">
+                        0
+                    </strong>
+
+                    <small>
+                        Streak
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    🏆
+
+                    <strong id="badge-count">
+                        0
+                    </strong>
+
+                    <small>
+                        Badges
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    🌱
+
+                    <strong id="action-count">
+                        0
+                    </strong>
+
+                    <small>
+                        Actions
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         LEADERBOARD
+    ======================================= -->
+
+    <section
+        id="leaderboard"
+        class="section">
+
+
+        <div class="section-title">
+
+            <p>
+                🏆 COMPETE & INSPIRE
+            </p>
+
+            <h2>
+                EcoQuest Leaderboard
+            </h2>
+
+            <span>
+                See who's making the biggest impact.
+            </span>
+
+        </div>
+
+
+
+        <div class="leaderboard">
+
+
+            <div class="rank first">
+
+                <span>
+                    🥇
+                </span>
+
+                <strong>
+                    Green Guardians
+                </strong>
+
+                <b>
+                    8420 XP
+                </b>
+
+            </div>
+
+
+
+            <div class="rank second">
+
+                <span>
+                    🥈
+                </span>
+
+                <strong>
+                    Eco Ninjas
+                </strong>
+
+                <b>
+                    7980 XP
+                </b>
+
+            </div>
+
+
+
+            <div class="rank third">
+
+                <span>
+                    🥉
+                </span>
+
+                <strong>
+                    Planet Pioneers
+                </strong>
+
+                <b>
+                    7450 XP
+                </b>
+
+            </div>
+
+
+
+            <div class="rank">
+
+                <span>
+                    🌱
+                </span>
+
+                <strong>
+                    Leaf Legends
+                </strong>
+
+                <b>
+                    6910 XP
+                </b>
+
+            </div>
+
+
+
+            <!-- PLAYER -->
+
+            <div
+                class="rank"
+                id="player-rank">
+
+                <span>
+                    🎓
+                </span>
+
+                <strong>
+                    Eco Explorer
+                </strong>
+
+                <b id="leaderboard-xp">
+                    0 XP
+                </b>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         BADGES
+    ======================================= -->
+
+    <section
+        id="badges"
+        class="badge-section">
+
+
+        <div class="section-title">
+
+            <p>
+                🏅 COLLECT & ACHIEVE
+            </p>
+
+            <h2>
+                Unlock Eco Badges
+            </h2>
+
+            <span>
+                Earn XP and unlock achievements.
+            </span>
+
+        </div>
+
+
+
+        <div class="badges">
+
+
+            <div
+                class="badge"
+                id="badge-1">
+
+                <div class="badge-icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Recycling Hero
+                </h3>
+
+                <p>
+                    Earn 50 XP
+                </p>
+
+                <strong>
+                    🔒 Locked
+                </strong>
+
+            </div>
+
+
+
+            <div
+                class="badge"
+                id="badge-2">
+
+                <div class="badge-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Water Saver
+                </h3>
+
+                <p>
+                    Earn 100 XP
+                </p>
+
+                <strong>
+                    🔒 Locked
+                </strong>
+
+            </div>
+
+
+
+            <div
+                class="badge"
+                id="badge-3">
+
+                <div class="badge-icon">
+                    🌳
+                </div>
+
+                <h3>
+                    Tree Protector
+                </h3>
+
+                <p>
+                    Earn 200 XP
+                </p>
+
+                <strong>
+                    🔒 Locked
+                </strong>
+
+            </div>
+
+
+
+            <div
+                class="badge"
+                id="badge-4">
+
+                <div class="badge-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Planet Guardian
+                </h3>
+
+                <p>
+                    Earn 300 XP
+                </p>
+
+                <strong>
+                    🔒 Locked
+                </strong>
+
+            </div>
+
+
+
+            <div
+                class="badge"
+                id="badge-5">
+
+                <div class="badge-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Eco Champion
+                </h3>
+
+                <p>
+                    Earn 500 XP
+                </p>
+
+                <strong>
+                    🔒 Locked
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         QUIZ
+    ======================================= -->
+
+    <section
+        id="quiz"
+        class="quiz-section">
+
+
+        <div class="section-title">
+
+            <p>
+                🧠 TEST YOUR KNOWLEDGE
+            </p>
+
+            <h2>
+                Environmental Quiz
+            </h2>
+
+            <span>
+                Answer correctly and earn XP!
+            </span>
+
+        </div>
+
+
+
+        <div class="quiz-card">
+
+
+            <div class="quiz-header">
+
+                <span>
+                    Question 1 of 5
+                </span>
+
+                <span>
+                    ⭐ +50 XP
+                </span>
+
+            </div>
+
+
+
+            <h3 id="question">
+
+                Which of the following is
+                a renewable source of energy?
+
+            </h3>
+
+
+
+            <div class="options">
+
+                <button
+                    onclick="checkAnswer(this, 0)">
+
+                    A. Coal
+
+                </button>
+
+
+                <button
+                    onclick="checkAnswer(this, 1)">
+
+                    B. Petroleum
+
+                </button>
+
+
+                <button
+                    onclick="checkAnswer(this, 2)">
+
+                    C. Solar Energy
+
+                </button>
+
+
+                <button
+                    onclick="checkAnswer(this, 3)">
+
+                    D. Natural Gas
+
+                </button>
+
+            </div>
+
+
+
+            <p id="quiz-result"></p>
+
+
+
+            <div class="quiz-xp">
+
+                ⭐ Your XP:
+
+                <strong id="xp">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+
+    <footer>
+
+        <div>
+
+            <h2>
+                🌱 EcoQuest
+            </h2>
+
+            <p>
+                Learn • Play • Impact
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 EcoQuest
+            </p>
+
+            <p>
+                Gamified Environmental Education
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
